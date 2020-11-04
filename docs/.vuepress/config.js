@@ -3,7 +3,6 @@ const pkg = require('../../package.json');
 module.exports = {
   title: 'S1Seven Enhancement Proposals',
   base: '/SEP/',
-  dest: 'public',
   themeConfig: {
     logo: '/logo.png',
     repo: pkg.repository.url,
