@@ -9,14 +9,8 @@ module.exports = {
     repo: pkg.repository.url,
     repoLabel: 'Git',
     docsDir: 'docs',
-    nav: [
-      { text: 'Readme', link: '/readme/' },
-      { text: 'Schema', link: '/schema/' },
-    ],
-    sidebar: [
-      ['/readme/', 'Readme'],
-      ['/schema/', 'Schema'],
-    ],
+    nav: [{ text: 'Readme', link: '/readme/' }],
+    sidebar: [['/readme/', 'Readme']],
     serviceWorker: {
       updatePopup: true, // Boolean | Object, default to undefined.
       // If set to true, the default text config will be:

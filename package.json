@@ -6,7 +6,7 @@
   "scripts": {
     "docs:md": "cp -p ./README.md ./docs/readme/.",
     "docs:dev": "npm run docs:md && vuepress dev docs",
-    "docs:build": "docs:md && vuepress build docs",
+    "docs:build": "npm run docs:md && vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
