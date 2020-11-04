@@ -1,0 +1,25 @@
+{
+  "name": "sep",
+  "version": "0.0.1",
+  "description": "S1Seven enhancement proposals",
+  "main": "index.js",
+  "scripts": {
+    "docs:md": "cp -p ./README.md ./docs/readme/.",
+    "docs:dev": "npm run docs:md && vuepress dev docs",
+    "docs:build": "docs:md && vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1seven/SEP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s1seven/SEP/issues"
+  },
+  "homepage": "https://github.com/s1seven/SEP#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
