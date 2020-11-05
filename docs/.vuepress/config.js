@@ -8,11 +8,14 @@ module.exports = {
     repo: pkg.repository.url,
     repoLabel: 'Git',
     docsDir: 'docs',
-    nav: [{ text: 'Readme', link: '/readme/' }],
-    sidebar: [['/readme/', 'Readme']],
+    nav: [{ text: 'Home', link: '/' }],
+    sidebar: [
+      ['/informations/', 'Informations'],
+      ['/schemas/', 'Schemas'],
+      ['/tools/', 'Tools'],
+    ],
     serviceWorker: {
-      updatePopup: true, // Boolean | Object, default to undefined.
-      // If set to true, the default text config will be:
+      updatePopup: true,
       updatePopup: {
         message: 'New content is available.',
         buttonText: 'Refresh',
