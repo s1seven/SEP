@@ -357,7 +357,14 @@ This example is based on `v0.0.2-2`
           }
         ]
       },
-      "NormativeRef": ["ISO 9001", "IATF 16949", "EN/AS 9100", "ISO 14001", "ISO 50001", "NADCAP"],
+      "NormativeRef": [
+        "ISO 9001",
+        "IATF 16949",
+        "EN/AS 9100",
+        "ISO 14001",
+        "ISO 50001",
+        "NADCAP"
+      ],
       "ObjectOfDeclaration": [
         {
           "ObjectId": "1",
@@ -854,7 +861,6 @@ This example is based on `v0.0.2-2`
     "HashValue": "7D931C43B44AF59CBF0B68C882452BB7"
   }
 }
-
 ```
 
 :::
@@ -888,7 +894,7 @@ It will be used after the creation of the certificate to :
 
 They are versioned by following the semantic versioning system.
 
-After a release is created/updated/deleted, the Git repository triggers a webhook on an external service that stores the schema and its dependencies.
+After a release is created/updated/deleted, the Git repository triggers a webhook on an external service - [schemas-deploy] - that stores the schema and its dependencies.
 
 Those files are available on an url formatted like `<base-url>/<schema-repo-to-lowercase>/v<version>/<filename>`.
 
@@ -898,6 +904,40 @@ Currently the schemas are served at https://schemas.en10204.io/
 
 ### Tools
 
-A specific library will handle common use case of certificates manipulation and will be responsible for fetching / caching the right schemas and its dependencies.
+A specific library - [schema-tools] - handles common use case of certificates manipulation and is responsible for fetching / caching the right schemas and its dependencies.
 
 This library will also handle tests of multiple schemas / certificates versions to ensure consistency in time.
+
+### Workflow
+
+```
+        +------------------------------------------------+
+        |    Fetch releases                              |
+        |                                                |
+        |                                      +---------^--------+
+  +-----^--------+   +-----------+  Github     |                  |  
+  | X-schemas    |   |           |  webhooks   | [schemas-deploy] | 
+  | Y-schemas    +---> released  |------------->    Server        | 
+  | Z-schemas    |   |           |             |                  | 
+  +--------------+   +-----------+             |                  |   
+                                               +----------+-------+ 
+                                                          | Fetch
+                                                          | Schemas &
+  +-------------+               +------------------+      | Dependencies
+  | X-Service   | Certificate   |                  |      |
+  | Y-Service   <--------------->  [schema-tools]  <------+
+  | Z-Service   | Validation,   |                  |
+  +-------------+ Rendering ... +------------------+
+      
+```
+
+## Benefits
+
+- Each application can focus on their main purpose and rely on [schema-tools] to handle certificates
+
+- One single point of maintenance for certificate related operations
+
+- Clear versioning of the schemas
+
+[schemas-deploy]: https://github.com/s1seven/schemas-deploy
+[schema-tools]: https://github.com/s1seven/schema-tools
