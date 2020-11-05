@@ -57,6 +57,10 @@ const copyDir = (src, dest) => {
       input: 'favicon.ico',
       output: `${docsPath}/.vuepress/public/favicon.ico`,
     },
+    {
+      input: 'informations/SEP-TEMPLATE.md',
+      output: `.github/ISSUE_TEMPLATE/enhancement-proposal.md`,
+    },
   ];
 
   try {
