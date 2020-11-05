@@ -11,9 +11,5 @@ It will be used to present changes or additions that affect multiple components 
 | Name                       |   Type   | Status |
 | -------------------------- | :------: | -----: |
 | [schemas versioning]       | Standard |  Draft |
-| [schemas tools]            | Standard |  Draft |
-| [contributions guidelines] |   Meta   |  Draft |
 
 [schemas versioning]: ../schemas/README.md
-[schemas tools]: ../tools/README.md
-[contributions guidelines]: ../informations/guidelines.md

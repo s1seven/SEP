@@ -12,7 +12,6 @@ module.exports = {
     sidebar: [
       ['/informations/', 'Informations'],
       ['/schemas/', 'Schemas'],
-      ['/tools/', 'Tools'],
     ],
     serviceWorker: {
       updatePopup: true,
