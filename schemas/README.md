@@ -266,6 +266,599 @@ The e-CoC.schema.json is a reimplementation of [e-coc.org schema](https://e-coc.
 
 [Repository](https://github.com/s1seven/E-CoC-schemas)
 
+::: tip
+This example is based on `v0.0.2-2`
+:::
+
+::: details Example E-CoC Certificate
+
+```json
+{
+  "Id": "89172671",
+  "Uuid": "c42cf70d-042e-44e6-a918-02e57aa69982",
+  "URL": "",
+  "RefSchemaUrl": "https://schemas.en10204.io/e-coc-schemas/v0.0.2-2/schema.json",
+  "EcocData": {
+    "DataLevel": "C",
+    "Data": {
+      "EcocType": "MaterialCertificate3.1",
+      "Parties": [
+        {
+          "PartyNo": 1,
+          "PartyName": "Westdeutscher Metall-Handel GmbH",
+          "PartyIdentifier": [
+            {
+              "NameOfIdentifier": "CageCode",
+              "ValueOfIdentifier": "CA433"
+            }
+          ],
+          "PartyAddress": {
+            "StreetAddress": "Manderscheidtstr. 76-78",
+            "City": "Essen",
+            "PostalCode": "45141",
+            "CountryCode": "DE",
+            "State": "",
+            "AddAddressLine": ""
+          },
+          "PartyRole": "Recipient",
+          "AdditionalPartyProperties": []
+        },
+        {
+          "PartyNo": 2,
+          "PartyName": "AMAG Rolling GmbH",
+          "PartyIdentifier": [
+            {
+              "NameOfIdentifier": "CageCode",
+              "ValueOfIdentifier": "1906N"
+            },
+            {
+              "NameOfIdentifier": "VATID",
+              "ValueOfIdentifier": "ATU37043203"
+            }
+          ],
+          "PartyAddress": {
+            "StreetAddress": "Lamprechtshausener Str. 61",
+            "City": "Ranshofen",
+            "PostalCode": "5282",
+            "CountryCode": "AT",
+            "State": "",
+            "AddAddressLine": ""
+          },
+          "PartyRole": "Manufacturer"
+        }
+      ],
+      "BusinessRef": {
+        "StandardReferences": [
+          {
+            "Name": "OrderNo",
+            "Value": "686901"
+          },
+          {
+            "Name": "OrderDate",
+            "Value": "2020-01-27"
+          },
+          {
+            "Name": "DeliveryNote",
+            "Value": "89172671"
+          },
+          {
+            "Name": "DeliveryDate",
+            "Value": "2020-01-28"
+          }
+        ],
+        "AdditionalReferences": [
+          {
+            "Name": "OrderConfirmation",
+            "Value": ["179981"]
+          },
+          {
+            "Name": "OrderConfirmationDate",
+            "Value": ["2020-01-27"]
+          }
+        ]
+      },
+      "NormativeRef": ["ISO 9001", "IATF 16949", "EN/AS 9100", "ISO 14001", "ISO 50001", "NADCAP"],
+      "ObjectOfDeclaration": [
+        {
+          "ObjectId": "1",
+          "ObjectName": "AMAG TopPlate Gussplatte gefräst",
+          "ObjectType": "Material",
+          "Quantities": [
+            {
+              "Amount": 1096,
+              "Unit": "Kg"
+            },
+            {
+              "Amount": 6,
+              "Unit": "Pcs"
+            }
+          ],
+          "Dimensions": [
+            {
+              "Direction": "Length",
+              "DimValue": 3020,
+              "DimUnit": "mm"
+            },
+            {
+              "Direction": "Width",
+              "DimValue": 1520,
+              "DimUnit": "mm"
+            },
+            {
+              "Direction": "Height",
+              "DimValue": 15,
+              "DimUnit": "mm"
+            }
+          ],
+          "NormativeRef": [],
+          "ObjectProperties": [
+            {
+              "Name": "BatchNo",
+              "Value": ["46423/02"]
+            },
+            {
+              "Name": "CastNo",
+              "Value": ["01/0004999/9"]
+            },
+            {
+              "Name": "PackageNo",
+              "Value": ["1799810001"]
+            },
+            {
+              "Name": "Material",
+              "Value": ["5083"]
+            },
+            {
+              "Name": "Temper",
+              "Value": ["GH"]
+            },
+            {
+              "Name": "PackageNo",
+              "Value": ["1799810001"]
+            },
+            {
+              "Name": "Form",
+              "Value": ["Platten (gesägt/gefräst)"]
+            }
+          ],
+          "AdditionalObjectProperties": []
+        },
+        {
+          "ObjectId": "2",
+          "ObjectName": "AMAG TopPlate Gussplatte gefräst",
+          "ObjectType": "Material",
+          "Quantities": [
+            {
+              "Amount": 1093,
+              "Unit": "Kg"
+            },
+            {
+              "Amount": 6,
+              "Unit": "Pcs"
+            }
+          ],
+          "Dimensions": [
+            {
+              "Direction": "Length",
+              "DimValue": 3020,
+              "DimUnit": "mm"
+            },
+            {
+              "Direction": "Width",
+              "DimValue": 1520,
+              "DimUnit": "mm"
+            },
+            {
+              "Direction": "Height",
+              "DimValue": 15,
+              "DimUnit": "mm"
+            }
+          ],
+          "NormativeRef": [],
+          "ObjectProperties": [
+            {
+              "Name": "BatchNo",
+              "Value": ["46423/01"]
+            },
+            {
+              "Name": "CastNo",
+              "Value": ["01/0005004/9"]
+            },
+            {
+              "Name": "PackageNo",
+              "Value": ["1799810002"]
+            },
+            {
+              "Name": "Material",
+              "Value": ["5083"]
+            },
+            {
+              "Name": "Temper",
+              "Value": ["GH"]
+            },
+            {
+              "Name": "PackageNo",
+              "Value": ["1799810002"]
+            },
+            {
+              "Name": "Form",
+              "Value": ["Platten (gesägt/gefräst)"]
+            }
+          ],
+          "AdditionalObjectProperties": []
+        }
+      ]
+    },
+    "Results": {
+      "MaterialCertification": [
+        {
+          "NameOfTest": "ChemicalComposition",
+          "TestStandardOrMethod": "",
+          "NumberOfTests": 1,
+          "RefObjectIDs": ["1"],
+          "SampleNumber": "",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "Si",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.27",
+              "ActualTo": "0.27"
+            },
+            {
+              "ValueName": "Fe",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.36",
+              "ActualTo": "0.36"
+            },
+            {
+              "ValueName": "Cu",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.07",
+              "ActualTo": "0.07"
+            },
+            {
+              "ValueName": "Mn",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.48",
+              "ActualTo": "0.48"
+            },
+            {
+              "ValueName": "Mg",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "4.68",
+              "ActualTo": "4.68"
+            },
+            {
+              "ValueName": "Cr",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.07",
+              "ActualTo": "0.07"
+            },
+            {
+              "ValueName": "Zn",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.10",
+              "ActualTo": "0.10"
+            },
+            {
+              "ValueName": "Ti",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.03",
+              "ActualTo": "0.03"
+            },
+            {
+              "ValueName": "OtherSingle",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.02",
+              "ActualTo": "0.02"
+            },
+            {
+              "ValueName": "OtherSum",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "0.04",
+              "ActualTo": "0.04"
+            }
+          ]
+        },
+        {
+          "NameOfTest": "ChemicalComposition weight proportion (OES)",
+          "TestStandardOrMethod": "",
+          "NumberOfTests": 1,
+          "RefObjectIDs": ["2"],
+          "SampleNumber": "",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "Si",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.40",
+              "ActualFrom": "0.24",
+              "ActualTo": "0.24"
+            },
+            {
+              "ValueName": "Fe",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.40",
+              "ActualFrom": "0.37",
+              "ActualTo": "0.37"
+            },
+            {
+              "ValueName": "Cu",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.1",
+              "ActualFrom": "0.06",
+              "ActualTo": "0.06"
+            },
+            {
+              "ValueName": "Mn",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "0.4",
+              "SpecMax": "1.0",
+              "ActualFrom": "0.50",
+              "ActualTo": "0.50"
+            },
+            {
+              "ValueName": "Mg",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "4.0",
+              "SpecMax": "4.9",
+              "ActualFrom": "4.8",
+              "ActualTo": "4.8"
+            },
+            {
+              "ValueName": "Cr",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "0.05",
+              "SpecMax": "0.25",
+              "ActualFrom": "0.07",
+              "ActualTo": "0.07"
+            },
+            {
+              "ValueName": "Zn",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.25",
+              "ActualFrom": "0.09",
+              "ActualTo": "0.09"
+            },
+            {
+              "ValueName": "Ti",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "ß.15",
+              "ActualFrom": "0.03",
+              "ActualTo": "0.03"
+            },
+            {
+              "ValueName": "OtherSingle",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.05",
+              "ActualFrom": "0.01",
+              "ActualTo": "0.01"
+            },
+            {
+              "ValueName": "OtherSum",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "0.15",
+              "ActualFrom": "0.04",
+              "ActualTo": "0.04"
+            }
+          ]
+        },
+        {
+          "NameOfTest": "TensileTest",
+          "TestStandardOrMethod": "",
+          "NumberOfTests": 144,
+          "RefObjectIDs": ["1"],
+          "SampleNumber": "2",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "true",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "Rm",
+              "Unit": "MPa",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "237",
+              "ActualTo": "253"
+            },
+            {
+              "ValueName": "Rp0.2",
+              "Unit": "MPa",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "123",
+              "ActualTo": "126"
+            },
+            {
+              "ValueName": "A5",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "8",
+              "ActualTo": "12"
+            }
+          ]
+        },
+        {
+          "NameOfTest": "TensileTest",
+          "TestStandardOrMethod": "",
+          "NumberOfTests": 144,
+          "RefObjectIDs": ["2"],
+          "SampleNumber": "2",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "true",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "Rm",
+              "Unit": "MPa",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "239",
+              "ActualTo": "254"
+            },
+            {
+              "ValueName": "Rp0.2",
+              "Unit": "MPa",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "118",
+              "ActualTo": "126"
+            },
+            {
+              "ValueName": "A5",
+              "Unit": "percent",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "9",
+              "ActualTo": "12"
+            }
+          ]
+        },
+        {
+          "NameOfTest": "GrainSize",
+          "TestStandardOrMethod": "ASTM",
+          "NumberOfTests": 1,
+          "RefObjectIDs": ["1"],
+          "SampleNumber": "1",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "GM_K",
+              "Unit": "mum",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "127",
+              "ActualTo": "127"
+            }
+          ]
+        },
+        {
+          "NameOfTest": "GrainSize",
+          "TestStandardOrMethod": "ASTM",
+          "NumberOfTests": 1,
+          "RefObjectIDs": ["2"],
+          "SampleNumber": "1",
+          "SamplePositionAcrossWidth": "",
+          "SamplePositionAlongLength": "",
+          "SamplePositionThroughThickness": "",
+          "TestOK": true,
+          "TestValues": [
+            {
+              "ValueName": "GM_K",
+              "Unit": "mum",
+              "TypeOfValue": "number",
+              "SpecMin": "",
+              "SpecMax": "",
+              "ActualFrom": "107",
+              "ActualTo": "107"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "Declaration": {
+    "DateOfIssue": "2020-01-28",
+    "Concessions": ["", ""],
+    "remarks": [
+      "Herstellerland Österreich",
+      "The Goods are of Austrian origin",
+      "Technical Spec.:",
+      "AMAG TopPlate Gussplatte gefräst, Rev.07, September 2015"
+    ],
+    "ConformityStatus": "True",
+    "Signature": {
+      "SignerName": "Josef Klampfer",
+      "SignerPosition": "Factory specialist",
+      "SignatureStamp": "ABCDEFGHIJKLMNOPQRSTUVWXYZA",
+      "SignatureDate": "2020-01-28"
+    },
+    "CocConfirmationText": [
+      "Es wird bestätigt, dass die Lieferung geprüft wurde und den Vereinbarungen bei der Bestellung entspricht.",
+      "We hereby certify that the material described above has been tested and complies with the terms of the order contract."
+    ]
+  },
+  "Attachment": {
+    "FileName": "AMAG EN 10204 3.1.pdf",
+    "FileType": "application/pdf",
+    "Encoding": "base64",
+    "Data": "JVBERi0xLjQNCiWio4****",
+    "HashAlgorithm": "MD5",
+    "HashValue": "7D931C43B44AF59CBF0B68C882452BB7"
+  }
+}
+
+```
+
+:::
+
 ## Problem
 
 Applications and services in S1Seven ecosystem requires to access those schemas for reasons like :
