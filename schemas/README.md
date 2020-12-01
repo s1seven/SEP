@@ -885,7 +885,7 @@ Each schema is contained in its own repository, along with its static dependenci
 
 All schemas share a `RefSchemaUrl` property, aiming to keep the reference of which schema was used to generate a certificate.
 
-It will be used after the creation of the certificate to :
+It is used after the creation of the certificate to :
 
 - validate the certificate object
 - generate an HTML / PDF file
@@ -906,7 +906,7 @@ Currently the schemas are served at https://schemas.en10204.io/
 
 A specific library - [schema-tools] - handles common use case of certificates manipulation and is responsible for fetching / caching the right schemas and its dependencies.
 
-This library will also handle tests of multiple schemas / certificates versions to ensure consistency in time.
+This library also handles tests of multiple schemas / certificates versions to ensure consistency in time.
 
 ### Workflow
 
@@ -920,7 +920,7 @@ This library will also handle tests of multiple schemas / certificates versions 
   | Y-schemas    +---> released  |------------->    Server        | 
   | Z-schemas    |   |           |             |                  | 
   +--------------+   +-----------+             |                  |   
-                                               +----------+-------+ 
+   Repositories                                +----------+-------+ 
                                                           | Fetch
                                                           | Schemas &
   +-------------+               +------------------+      | Dependencies
@@ -928,7 +928,7 @@ This library will also handle tests of multiple schemas / certificates versions 
   | Y-Service   <--------------->  [schema-tools]  <------+
   | Z-Service   | Validation,   |                  |
   +-------------+ Rendering ... +------------------+
-      
+   Applications   
 ```
 
 ## Benefits
