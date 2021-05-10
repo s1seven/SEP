@@ -48,7 +48,7 @@ const copyDir = (src, dest) => {
 };
 
 (async function(argv) {
-  const folders = ['informations', 'EN10168', 'schemas'];
+  const folders = ['informations', 'EN10168', 'schemas', 'notarization'];
   const docsPath = './docs';
   const files = [
     { input: 'README.md', output: `${docsPath}/README.md` },

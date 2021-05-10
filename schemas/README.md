@@ -1,7 +1,7 @@
 # S1Seven Schemas
 
-::: warning
-This specification is still on Draft state
+::: tip
+This specification is approved
 :::
 
 [[toc]]

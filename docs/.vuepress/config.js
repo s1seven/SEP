@@ -13,6 +13,7 @@ module.exports = {
       ['/informations/', 'Informations'],
       ['/EN10168/', 'EN10168'],
       ['/schemas/', 'Schemas'],
+      ['/notarization/', 'Notarization'],
     ],
     serviceWorker: {
       updatePopup: true,
