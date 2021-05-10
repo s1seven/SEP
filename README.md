@@ -8,8 +8,10 @@ This repository contains Enhancement Proposals [SEP](https://s1seven.github.io/S
 
 It will be used to present changes or additions that affect multiple components of S1Seven ecosystem OR changes to a single key component.
 
-| Name                       |   Type   | Status |
-| -------------------------- | :------: | -----: |
-| [schemas versioning]       | Standard |  Draft |
+| Name                   |   Type   |   Status |
+| ---------------------- | :------: | -------: |
+| [EN10168 certificates] | Standard | approved |
+| [schemas versioning]   | Standard | approved |
 
+[en10168 certificates]: ../EN10168/README.md
 [schemas versioning]: ../schemas/README.md

@@ -1,6 +1,6 @@
 {
   "name": "sep",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "S1Seven enhancement proposals",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/s1seven/SEP#readme",
   "devDependencies": {
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.8.2"
   }
 }
