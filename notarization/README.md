@@ -1,4 +1,4 @@
-# Notarization
+# Self-Attestion and Notarization
 
 ::: warning
 This specification is still on Draft state
@@ -6,61 +6,64 @@ This specification is still on Draft state
 
 [[toc]]
 
+## Introduction
+
+This SEP outlines different options to self-attest or notarize any arbitrary input on Blockchain. It starts with essential definitions continuing with the application of modern cryptography to build solutions for the use-case.
+
 ## Definitions
 
-- A Hash H is a one-way function calculating a checksum on any data with the guarantee that no two inputs return the some output
-- A Notarization is the act of storing a hash on Blockchain as a proof of the existence of data at the point in time of the transaction T
-- A Signer S is the owner of public private key pair enabling to create and sign a transaction T on Blockchain
-- An Identity I is given to any entity by the public key for which it controls the private key.
-- An Attestation of the Identity of party P is the publication of the public key PK and further data such as name on Blockchain.
-- Key derivation is a mechanism to derive new public private key pairs from one seed.
+- A hash function is a one-way function calculating a fix-sized output of any abritary data (see [hash functions](https://en.wikipedia.org/wiki/Hash_function)).
+- **Self-Attestion** and **Notarization** is the act of storing arbitary data or a hash of it in a transaction on Blockchain creating an immutable proof of the existence of the data at the time of the transaction.
+- A prerequiste for a robust application is that the hash function applied to the input is collison free, which means that no two inputs result in the same output (see [collision-free hash function](https://en.wikipedia.org/wiki/One-way_function#Related_concepts)).
+- A signer is the entity owning the private key used to sign a transaction on Blockchain.
+- If the entity owning the input data and the entity owning the private key to sign the transaction are the same entity, the process should be called **Self-Attestion**. In an analog world the equivalent is the signing a document by its creator.
+- If the entity owning the input data and the entity owning the private key to sign the transaction are different entities, the process should be called **Notarization**. In an analog world the equivalent is the signing a document by a third party such as a notary.
 
-## Simple Notarization
+Fromt the definitions it should become clear that there at least two dimensions of **Self-Attestion** and or **Notarization**. First, there is a social dimension: who has the autority to sign statements about the real world? Second a there is a technical dimension: who controls the private keys to sign statements about the real world?
 
-Hashes H1..n ares calculated by parties P1..j and sent to service provider which creates and signs transaction T1..n with hash as payload. The service provider controls the private key PK1 controlled by service provider.
+Before going into a more technical discussion of how to apply cryptography to the problem the definition of a [notary public](https://www.merriam-webster.com/dictionary/notary) should be cited for contextual orientation:
 
-| Advantages                               | Drawbacks                                                            |
-| ---------------------------------------- | -------------------------------------------------------------------- |
-| Serves the basic purpose of notarization | Easy to fake data — every party can send faked data of other parties |
-| Simple to use                            |                                                                      |
+> a public officer who attests or certifies writings (such as a deed) to make them authentic and takes affidavits, depositions, and protests of negotiable paper
 
-Remark: this is the approach used by S1Seven with the demo system available at https://demo.notarization.en10204.io
+Based on the definitions above the following distinctive applications are possible.
 
-## Transparent Notarization with Identity
+## Notarization
 
-The Identity of party P with public key PK is attested on Blockchain.
-Party P calculates Hashes H1..n of data sets D1..n and notarizes each in a transaction with public key PK.
+The notary controls a key pair KP<sub>0</sub>. Users submit data to the notary which calculates the hash and stores it on Blockchain signed with the public key of KP<sub>0</sub>.
 
-| Advantages                                                                   | Drawbacks                                                                                             |
-| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Serves the basic purpose of notarization                                     | Notarizations can be clearly linked to a party                                                        |
-| The signer of a notarization is linked to the attestation via the public key | Information on the number and timings of notarizations become transparent for each market participant |
+| Advantages                           | Drawbacks        |
+| ------------------------------------ | ---------------- |
+| Serves the purpose of notarization   | No ownership distinction Data ownership i |
+| Low technical requirements for users |                  |
 
-## Blinded Notarization with Unverifiable Identity
+## Transparent atttestion with verifiable identity
 
-The Identity of party P with public key PK is attested on Blockchain.
-Party P calculates Hashes H1..n of data sets D1..n. For each transaction a new public private key pair Pi created by key derivation is used.
+Party P controls a key pair KP<sub>0</sub>. The public key of KP<sub>0</sub> is used as verifiable identifier on Blockchain. Party P attests data by calculating the hash of it and storing the hash of it on Blockchain signed with the public key of KP<sub>0</sub>.
 
-| Advantages                                                        | Drawbacks                                                                  |
-| ----------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Serves the basic purpose of notarization                          | Identity of signer cannot be verified - neither manually nor automatically |
-| Transactions cannot be linked back to signer                      |                                                                            |
-| No third party can observe the transaction history                |                                                                            |
-| Signer can prove ownership of keys used for signing a transaction |                                                                            |
+| Advantages                                                              | Drawbacks                                                                                           |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Serves the purpose of attestation                                       | All attestations can be linked to a party                                                           |
+| The attesting party is identified by one public key                     | Number and timing of attestations might contain information not wanted to be provided to the public |
+| Ownership of a public key can be proofed by signing a challenge request | Higher technical requirements as the key pair must be stored in a safe manner                       |
 
-## Blinded Notarization with Verifiable identity
+## Stealth attestation with unverifiable identity
 
-The Identity of party P with public key PK is attested on Blockchain.
-Party P calculates Hashes H1..n of data sets D1..n. For each hash Hi a signature Si with the private key of PK is created. Both Hi and Si are stored in a transaction for which a new public private key pair Pi is created by key derivation.
+Party P controls a key pair KP<sub>0</sub>. It calculates the hash of data and stores it on Blockchain signing each transaction with a new individual derived key KP<sub>i</sub>.
 
-| Advantages                                                                                                                                                 | Disadvantages                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Serves the basic purpose of notarization                                                                                                                   | Verification of signature requires information about the signers identity, which could typically require the hashed data itself |
-| Transaction cannot be linked back to signer                                                                                                                |                                                                                                                                 |
-| Signer of a transaction can be validated by verifying the signature with the attested public key                                                           |                                                                                                                                 |
-| No third party can learn about the identity of a transaction signer without additional knowledge about the transaction signer, e.g. the name of the party  |
-| Signer can prove ownership of keys used for signing a transaction                                                                                          |                                                                                                                                 |
+| Advantages                                                              | Drawbacks                                                                    |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Serves the purpose of attestation                                       | Identity of signer cannot be verified - neither manually nor automatically   |
+| Transactions cannot be linked back to signer                            | Higher technical requirements as key management must support key deriviation |
+| No third party can observe the transaction history                      |                                                                              |
+| Ownership of a public key can be proofed by signing a challenge request |                                                                              |
 
-# Implementation Aspects
+## Stealth attestation with verifiable identity
 
-Basically we could let customers decide which approach the want to apply to their notarizations (and now to be mad, it could be driven by data types (facepalm).
+Party P controls a key pair KP0. The public key of KP<sub>0</sub> is used as verifiable identifier on Blockchain. Party P calculates the hash of data and signs it with the public KP<sub>0</sub>. It stores both the hash and the signature on Blockchain signing each transaction with a new individual derived key KP<sub>i</sub>.
+
+| Advantages                                                           | Disadvantages                                                                  |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Serves the purpose of attestation                                    | Complex                                                                        |
+| Identity of transaction signer can be verified via signature of hash | Identity verification only possible if hashed data contains identity of signer |
+| Transactions cannot be linked back to signer                         |                                                                                |
+| Signer can prove ownership of keys                                   |                                                                                |
