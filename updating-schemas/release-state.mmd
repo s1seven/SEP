@@ -2,8 +2,8 @@
 %%{init: {'theme':'base'}}%%
 stateDiagram-v2
 
-		state "CoA Schema" as CoASchema
-		CoASchema: Updating the schema creates a Release Candidate
+		state "Schema" as Schema
+		Schema: Updating the schema creates a Release Candidate
 		
 		state "Schema Tools" as schemaTools
 		schemaTools: Update schema tools if necessary
@@ -17,9 +17,9 @@ stateDiagram-v2
     state "Schema release" as SchemaRelease
     state "Schema-tools release" as ToolsRelease
 		
-    [*] --> CoASchema
-    CoASchema --> schemaTools
-    CoASchema --> SchemaRelease
+    [*] --> Schema
+    Schema --> schemaTools
+    Schema --> SchemaRelease
     schemaTools --> updated
     updated --> NoRCTools: no
     updated --> RC: yes
