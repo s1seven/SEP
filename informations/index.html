@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>S1Seven Enhancement Proposals (SEP) Guidelines | S1Seven Enhancement Proposals</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/SEP/assets/css/0.styles.2e3a4902.css" as="style"><link rel="preload" href="/SEP/assets/js/app.822f0c05.js" as="script"><link rel="preload" href="/SEP/assets/js/2.3b1a4616.js" as="script"><link rel="preload" href="/SEP/assets/js/10.06f9f910.js" as="script"><link rel="prefetch" href="/SEP/assets/js/11.c419cf0f.js"><link rel="prefetch" href="/SEP/assets/js/12.c88601d4.js"><link rel="prefetch" href="/SEP/assets/js/13.13873537.js"><link rel="prefetch" href="/SEP/assets/js/3.1b1bac0d.js"><link rel="prefetch" href="/SEP/assets/js/4.20b2ba74.js"><link rel="prefetch" href="/SEP/assets/js/5.7f1e672e.js"><link rel="prefetch" href="/SEP/assets/js/6.4aba964f.js"><link rel="prefetch" href="/SEP/assets/js/7.79a33cd8.js"><link rel="prefetch" href="/SEP/assets/js/8.46689415.js"><link rel="prefetch" href="/SEP/assets/js/9.0ebf5c22.js">
+    <link rel="stylesheet" href="/SEP/assets/css/0.styles.2e3a4902.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/SEP/" class="home-link router-link-active"><img src="/SEP/logo.png" alt="S1Seven Enhancement Proposals" class="logo"> <span class="site-name can-hide">S1Seven Enhancement Proposals</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/SEP/" class="nav-link">
+  Home
+</a></div> <a href="https://github.com/s1seven/SEP.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Git
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/SEP/" class="nav-link">
+  Home
+</a></div> <a href="https://github.com/s1seven/SEP.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Git
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/SEP/informations/" aria-current="page" class="active sidebar-link">Informations</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/SEP/informations/#goals-of-the-sep-process" class="sidebar-link">Goals of the SEP process</a></li><li class="sidebar-sub-header"><a href="/SEP/informations/#tenets-of-the-sep-process" class="sidebar-link">Tenets of the SEP process</a></li><li class="sidebar-sub-header"><a href="/SEP/informations/#sep-submission-workflow" class="sidebar-link">SEP Submission Workflow</a></li><li class="sidebar-sub-header"><a href="/SEP/informations/#what-qualifies-as-a-sep" class="sidebar-link">What qualifies as a SEP?</a></li></ul></li><li><a href="/SEP/EN10168/" class="sidebar-link">EN10168</a></li><li><a href="/SEP/schemas/" class="sidebar-link">Schemas</a></li><li><a href="/SEP/notarization/" class="sidebar-link">Notarization</a></li><li><a href="/SEP/updating-schemas/" class="sidebar-link">Updating schemas</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="s1seven-enhancement-proposals-sep-guidelines"><a href="#s1seven-enhancement-proposals-sep-guidelines" class="header-anchor">#</a> S1Seven Enhancement Proposals (SEP) Guidelines</h1> <p></p><div class="table-of-contents"><ul><li><a href="#goals-of-the-sep-process">Goals of the SEP process</a></li><li><a href="#tenets-of-the-sep-process">Tenets of the SEP process</a></li><li><a href="#sep-submission-workflow">SEP Submission Workflow</a><ul><li><a href="#phase-1-pre-proposal">Phase 1: Pre-proposal</a></li><li><a href="#phase-2-request-for-comments-for-the-sep">Phase 2: Request for Comments for the SEP</a></li><li><a href="#phase-3-work-commences">Phase 3: Work Commences</a></li><li><a href="#sep-pathways-and-status">SEP Pathways and Status</a></li></ul></li><li><a href="#what-qualifies-as-a-sep">What qualifies as a SEP?</a></li></ul></div><p></p> <h2 id="goals-of-the-sep-process"><a href="#goals-of-the-sep-process" class="header-anchor">#</a> Goals of the SEP process</h2> <p>S1Seven uses the S1Seven Enhancement Proposal process (SEP)
+to address distributed collaboration and experimentation.
+The primary guiding principle of the SEP process is to
+encourage collaboration and discussion as early as possible in the lifecycle
+of a major proposed change in Jupyter, with the goal of preventing costly rework,
+competing ideas, and unnecessary forking or fragmentation of ideas.</p> <p>Several sub-goals exist for this process:</p> <ul><li><strong>Maximize success of large proposals</strong> that get stalled in the wrong venue (e.g. a single PR comment thread)</li> <li>Provide a <strong>better alternative to “piecemeal” development</strong> where multiple PRs
+to build an end-to-end set of functionality are split across multiple GitHub
+project without broad consensus, context, or guidance.</li> <li>Provide a <strong>clear, time-limited, and authoritative process for work proposals</strong>,
+to facilitate funding conversations. (e.g. provide a concrete artifact to reference
+in a grant proposal, roadmap item, etc.)</li> <li>Provide a <strong>consolidated “stream” of all proposals across the entire Jupyter community</strong>
+that contributors of all levels can monitor and selectively engage in.</li></ul> <h2 id="tenets-of-the-sep-process"><a href="#tenets-of-the-sep-process" class="header-anchor">#</a> Tenets of the SEP process</h2> <p>The SEP process operates under the following tenets:</p> <ul><li><p><strong>The SEP process is intended for changes of non-trivial scope.</strong>
+“Non-trivial” is addressed below in the “SEP / Not-a-SEP Rubric” of this document.</p></li> <li><p><strong>The SEP process naturally complements the PR process, but does not replace it.</strong>
+A thoroughly-reviewed and approved SEP is a valuable reference during a PR to
+reduce friction, reduce time-consuming context sharing, and encapsulate decisions
+and other discussions. Moving a premature PR into a SEP should be a lightweight
+process that doesn’t cause friction for the contributor.</p> <p>For example, GitHub issue and PR templates across the entire Jupyter project should have
+references to the SEP process as a possible outcome of a given PR.</p></li> <li><p><strong>There is one SEP repository, all S1Seven-related projects must use it.</strong>
+To faciliate the easiest possible adoption and high visibility of ideas, a
+single SEP repository will be used. Even if a SEP only applies to a single organization.</p></li> <li><p>The SEP process <strong>has multiple valid use cases</strong>. Each use case might have a
+slightly different expected workflow. Some expected use cases include:</p> <ul><li>Non-trivial feature proposals within a single component that would benefit from
+process.</li> <li>Non-trivial features or improvements that span multiple projects.</li> <li>Any proposed changes to published APIs or core specifications (e.g., nbformat)</li> <li>Changes to the SEP process itself.</li> <li>Launching a major project in one of the S1Seven GitHub organizations.</li></ul></li></ul> <h2 id="sep-submission-workflow"><a href="#sep-submission-workflow" class="header-anchor">#</a> SEP Submission Workflow</h2> <p>The following sections describe the major checkpoints in the SEP process.
+Note that at any time, the SEP author may withdraw their SEP (and if it has
+been added to the README, its status becomes &quot;withdrawn&quot;).</p> <h3 id="phase-1-pre-proposal"><a href="#phase-1-pre-proposal" class="header-anchor">#</a> Phase 1: Pre-proposal</h3> <p>This is the least formal stage of any S1Seven Enhancement Proposals. During this
+phase, discussions on the mailing list, community forum, in-person, on github issues
+are all fine to gauge community interest, feasibility, consequences, and to
+scope out technical impact and implementation details.</p> <p>In order to transition out of the pre-proposal stage, the following checklist must be complete:</p> <ol><li><strong>Create a GitHub issue</strong> in the S1Seven Enhancement Proposals repo that</li> <li>Briefly outlines the proposal</li> <li>Suggests a review team (optional)</li> <li>Declares why it should be a SEP (See the “SEP / Not-a-SEP Rubric” below.)</li> <li><strong>Identify a Shepherd</strong> to see the process through. (Shepherds are assigned
+on a round-robin basis from a set of interested engaged volunteers).</li> <li><strong>Decide if it's a SEP</strong> according to the criteria listed above. The Shepherd decides if the SEP criteria have been met.</li></ol> <p><strong>If it's a SEP</strong>. The SEP author creates a new PR with the contents of the SEP proposal. See <a href="/SEP/informations/SEP-TEMPLATE.html">this markdown template</a> for a suggested structure of the pull-request.</p> <p>Subsequent discussion and decisions about the SEP will happen in that PR, and
+we now <strong>Move to the RFC phase</strong>.</p> <p><strong>If it’s not a SEP</strong>. The shepherd provides a reason for why the issue
+doesn't meet SEP criteria, and closes the issue.</p> <h3 id="phase-2-request-for-comments-for-the-sep"><a href="#phase-2-request-for-comments-for-the-sep" class="header-anchor">#</a> Phase 2: Request for Comments for the SEP</h3> <p>Phase two begins when <strong>the SEP author submits a draft of the SEP as a PR to the SEP repository</strong>.
+The Shepherd assigns a number to the SEP according to the pull-request number, and updates
+the README of the SEP repository with information about the now in-progress SEP.
+The Shepherd then works with the SEP author to
+<strong>identify and notify relevant individuals in the S1Seven community to review and comment</strong>.</p> <p>Once this group has been notified, the SEP process enters the RFC phase.</p> <p>During the <strong>Request For Comment (RFC) phase</strong>, the proposal is iterated on with
+feedback from the Review Team and the community at large. The Shepherd helps engage
+the Review Team and encourage productive discussion. After the Review Team members
+have signed off on the SEP, with the criteria that there are no major objections,
+and at least some of the Review Team are in favor, the Shepherd initiates the Final Comment Period.</p> <p>In the <strong>Final Comment Period (FCP)</strong>, the community at-large has at least 10 calendar days
+to provide any final comments on the SEP. A SEP may revert back to RFC if
+objections from the community are supported by the Review Team.</p> <p>At the end of the FCP, the SEP is either:</p> <ul><li><strong>approved</strong>, in which case the PR is merged and work may commence on implementing the SEP (see Phase 3, below)</li> <li><strong>rejected</strong>, in which case the PR is closed</li> <li>asked to return to the RFC phase.</li></ul> <p>In each case, the SEP's status should be updated in the README of the
+<code>s1seven/sep</code> repository.</p> <h3 id="phase-3-work-commences"><a href="#phase-3-work-commences" class="header-anchor">#</a> Phase 3: Work Commences</h3> <p>Once a SEP has been merged into the <code>s1seven/sep</code> repository,
+implementation can commence on the SEP. The SEP author does not need to implement the SEP themselves.</p> <p>If the SEP requires one or more pull-requests to be implemented, the author of the PRs should
+provide a reference to the SEP so that reviewer has background context on the SEP.
+As the SEP is being implemented, the SEP text should be amended with with addendums to
+denote the progress of the implementation using the following stages.</p> <ol><li>In progress implementation via (list of PRs).</li> <li>Fully implemented via (list of PRs).</li></ol> <p>If in the course of implementation, it is discovered that the implementation needs to
+be radically different from what was defined in the original SEP, then a pull
+request is submitted to modify the original SEP with the new necessary implementation,
+and a note citing the need for a modification to the SEP.
+This pull request should be re-approved by the original review team.</p> <h3 id="sep-pathways-and-status"><a href="#sep-pathways-and-status" class="header-anchor">#</a> SEP Pathways and Status</h3> <p>Below is a rough guide that describes the SEP process and its possible pathways.</p> <div class="language- extra-class"><pre class="language-text"><code>                      +-----------+
+                      |           |
+                      | withdrawn |
+                      |           |             +-----------+
+                      +-----------+             |           |
+                  SEP may be withdrawn          |  rejected |
+                      at any stage              |           |
+                                                +-----^-----+
+                                                      |
+                                                +------+------+
+  +--------------+   +-----------+             |             |            +-------------+   +-----------+
+  |              |   |           |             | Request for |            |             |   |           |
+  | pre-proposal +---&gt; submitted +-------------&gt;  Comments   +------------&gt; in progress +---&gt; completed |
+  |              |   |           |  identify   |    (RFC)    |  approved  |             |   |           |
+  +--------------+   +-----------+   review    |             |            +-------------+   +-----------+
+                                      team     +------+------+
+</code></pre></div><h2 id="what-qualifies-as-a-sep"><a href="#what-qualifies-as-a-sep" class="header-anchor">#</a> What qualifies as a SEP?</h2> <p>This section contains a set of principles to help determine when something is a SEP.
+These should be used to determine when something becomes a PR during the SEP
+pre-proposal stage, as well as to determine when a PR becomes a SEP at an individual repo level.</p> <p><strong>Principles to follow</strong></p> <p>Below are a few example guidelines to follow when deciding if an idea should include
+a SEP (If yes, it requires a SEP). Under each question is a relevant example proposal.</p> <ul><li>Does the proposal/implementation require PRs across multiple orgs?
+<ul><li><strong>Example:</strong> Handle schemas versioning</li></ul></li> <li>Does the proposal/implementation change an invariant in one or more orgs?</li> <li>Does the proposal/implementation create a new concept that will impact multiple repositories?</li> <li>Does the proposal involve creating a new repository or sub-project?</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/SEP/EN10168/">
+        EN10168
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/SEP/assets/js/app.822f0c05.js" defer></script><script src="/SEP/assets/js/2.3b1a4616.js" defer></script><script src="/SEP/assets/js/10.06f9f910.js" defer></script>
+  </body>
+</html>
