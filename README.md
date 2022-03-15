@@ -13,7 +13,9 @@ It will be used to present changes or additions that affect multiple components 
 | [EN10168 certificates] | Standard | approved |
 | [schemas versioning]   | Standard | approved |
 | [notarization]         | Standard |    draft |
+| [updating-schemas]     | Standard |    draft |
 
 [en10168 certificates]: ../EN10168/README.md
 [schemas versioning]: ../schemas/README.md
 [notarization]: ../notarization/README.md
+[updating-schemas]: ../updating-schemas/README.md
