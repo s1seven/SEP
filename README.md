@@ -14,8 +14,10 @@ It will be used to present changes or additions that affect multiple components 
 | [schemas versioning]   | Standard | approved |
 | [notarization]         | Standard |    draft |
 | [updating-schemas]     | Standard |    draft |
+| [schema definitions]   | Standard |    draft |
 
 [en10168 certificates]: ../EN10168/README.md
 [schemas versioning]: ../schemas/README.md
 [notarization]: ../notarization/README.md
 [updating-schemas]: ../updating-schemas/README.md
+[schema definitions]: ../schema-definitions/README.md
