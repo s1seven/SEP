@@ -20,4 +20,4 @@ It will be used to present changes or additions that affect multiple components 
 [schemas versioning]: ../schemas/README.md
 [notarization]: ../notarization/README.md
 [updating-schemas]: ../updating-schemas/README.md
-[updating-schemas]: ../schema-definitions/README.md
+[schema definitions]: ../schema-definitions/README.md
